@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+
+@font-face {
+  font-family: "zanzabar";
+  src: url("font/Zanzabar.woff2") format("woff2");
+}
+
+
       .data-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 10px;
+        max-width: 1200px;
+        margin: 0 auto;
       }
       article {
         border: 1px solid #333;
         padding: 10px;
         cursor: pointer;
+        background-color: #e8c936;
+        border-radius:30px;
       }
 
       img {
@@ -24,20 +35,43 @@
       nav {
         display: flex;
         justify-content: center;
-        gap: 10px;
-        margin-bottom: 20px;
+        gap: 1vw;
+        margin-bottom: 1vw;
+        
+        
+      }
+      
+        nav button {
+        cursor: pointer;
+        background-color: #e8c936;
+	      border-radius:30px;
+        font-family:Arial;
+	      font-size: 18px;
+	      font-weight:bold;
+	      padding:1vw 2vw;
+        
       }
 
       .valgt {
-        background-color: limegreen;
+        background-color: rgb(255, 146, 21);
       }
       h1 {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         display: flex;
         justify-content: center;
         gap: 10px;
+        
+        
       }
 
+      header h1 {
+        font-family: "zanzabar";
+        display: flex;
+        justify-content: center;
+        text-shadow: 3px 3px #f0c911;
+        font-size: 3vw;
+        
+      }
       #popup {
         display: none;
         position: fixed;
@@ -55,10 +89,10 @@
         margin: 4rem auto;
         border-radius: 25px;
         padding: 12px;
-        background-color: white;
+        background-color: #e8c936;
         flex-direction: column;
         justify-content: space-between;
-        text-align: center;
+        
       }
 
       #luk {
@@ -68,6 +102,27 @@
         font-weight: bolder;
         color: white;
         cursor: pointer;
+      }
+
+      #bistro p {
+        font-family: "zanzabar";
+	      font-size: 6vw;
+	      font-weight:bold;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-shadow: 3px 3px #f0c911;
+        padding-top: 5vw;
+
+      }
+
+      body {
+        background-image: url("billeder/background.jpg");
+        background-size: 100vw;
+        
+      }
+
+      p {
+        font-family: arial;
       }
     </style>
   </head>
@@ -85,7 +140,10 @@
       </article>
 </section>
 
-    <header><h1>Alle</h1></header>
+    <header>
+      <div id="bistro"><p>Bistro Babushka</p></div>
+
+        <h1>Alle</h1></header>
 
     <nav>
       <button data-kategori="alle" class="valgt">Alle</button>
